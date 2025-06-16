@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication & Division Facts Practice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Multiplication & Division Master</h1>
+        
+        <div class="game-container">
+            <div class="score-board">
+                <span>Score: <span id="score">0</span></span>
+                <span>Level: <span id="level">1</span></span>
+                <span>Time: <span id="timer">60</span>s</span>
+            </div>
+
+            <div class="game-area">
+                <div id="question-container" class="question-container">
+                    <h2 id="question-text">Ready to practice?</h2>
+                    <div id="visual-area" class="visual-area"></div>
+                    <div id="answer-input-container" class="answer-input-container">
+                        <input type="number" id="answer-input" placeholder="Enter your answer" style="display: none">
+                        <button id="submit-btn" class="btn" style="display: none">Submit</button>
+                    </div>
+                    <div id="options-container" class="options-container"></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="start-btn" class="btn">Start Practice</button>
+                <button id="next-btn" class="btn" style="display: none;">Next Question</button>
+            </div>
+
+            <div class="multiplication-table" id="multiplication-table">
+                <h3>Multiplication Table Reference</h3>
+                <div class="table-container" id="table-container"></div>
+            </div>
+
+            <div class="practice-modes">
+                <h3>Practice Modes:</h3>
+                <div class="mode-buttons">
+                    <button class="mode-btn active" data-mode="multiplication">Multiplication</button>
+                    <button class="mode-btn" data-mode="division">Division</button>
+                    <button class="mode-btn" data-mode="mixed">Mixed Practice</button>
+                </div>
+            </div>
+
+            <div class="stats">
+                <h3>Your Progress:</h3>
+                <div class="stats-container">
+                    <div>Correct: <span id="correct-count">0</span></div>
+                    <div>Incorrect: <span id="incorrect-count">0</span></div>
+                    <div>Average Time: <span id="avg-time">0</span>s</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

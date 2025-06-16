@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    width: 95%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #1e3c72;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    background: #f0f4f8;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.game-area {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.question-container {
+    text-align: center;
+}
+
+.visual-area {
+    margin: 2rem 0;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.answer-input-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+#answer-input {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    border: 2px solid #1e3c72;
+    border-radius: 8px;
+    width: 150px;
+    text-align: center;
+}
+
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.option-btn, .mode-btn {
+    padding: 1rem;
+    border: 2px solid #1e3c72;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    color: #1e3c72;
+}
+
+.option-btn:hover:not(:disabled), .mode-btn:hover {
+    background: #1e3c72;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.mode-btn.active {
+    background: #1e3c72;
+    color: white;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    background: #1e3c72;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.btn:hover:not(:disabled) {
+    background: #2a5298;
+    transform: translateY(-2px);
+}
+
+.btn:disabled, .option-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.multiplication-table {
+    background: #f0f4f8;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.table-container {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 4px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.table-cell {
+    background: white;
+    padding: 8px 4px;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.table-cell.header {
+    background: #1e3c72;
+    color: white;
+    font-weight: bold;
+}
+
+.table-cell:hover:not(.header) {
+    background: #e3e8ed;
+    transform: scale(1.1);
+}
+
+.practice-modes {
+    background: #f0f4f8;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.mode-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.stats {
+    background: #f0f4f8;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.correct {
+    background: #4CAF50 !important;
+    color: white !important;
+    border-color: #4CAF50 !important;
+}
+
+.incorrect {
+    background: #f44336 !important;
+    color: white !important;
+    border-color: #f44336 !important;
+}
+
+.highlight {
+    background: #ffd700 !important;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .table-container {
+        font-size: 0.8rem;
+    }
+    
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .mode-buttons {
+        flex-direction: column;
+    }
+    
+    .mode-btn {
+        width: 100%;
+    }
+} 

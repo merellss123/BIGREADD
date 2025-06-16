@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Properties Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Multiplication Properties Adventure</h1>
+        
+        <div class="game-container">
+            <div class="score-board">
+                <span>Score: <span id="score">0</span></span>
+                <span>Level: <span id="level">1</span></span>
+            </div>
+
+            <div class="game-area">
+                <div id="question-container" class="question-container">
+                    <h2 id="question-text">Welcome to Multiplication Properties!</h2>
+                    <div id="visual-area" class="visual-area"></div>
+                    <div id="options-container" class="options-container"></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="start-btn" class="btn">Start Game</button>
+                <button id="next-btn" class="btn" style="display: none;">Next Question</button>
+            </div>
+
+            <div class="property-info">
+                <h3>Properties:</h3>
+                <p>🔄 Commutative: a × b = b × a</p>
+                <p>🔗 Associative: (a × b) × c = a × (b × c)</p>
+                <p>📦 Distributive: a × (b + c) = (a × b) + (a × c)</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
